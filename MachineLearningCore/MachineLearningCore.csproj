@@ -3,7 +3,22 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Data\wikipedia-detox-250-line-data.tsv.txt" />
+    <None Remove="Data\wikipedia-detox-250-line-test.tsv.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\wikipedia-detox-250-line-data.tsv.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\wikipedia-detox-250-line-test.tsv.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.ML" Version="0.6.0" />
